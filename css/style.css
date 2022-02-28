@@ -1,0 +1,888 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    cursor: url(http://ani.cursors-4u.net/cursors/cur-13/cur1159.ani), url(http://ani.cursors-4u.net/cursors/cur-13/cur1159.png), auto !important; /* End http://www.cursors-4u.com */
+}
+li {
+  list-style: none!important;
+}
+html {
+  
+}
+@font-face {
+  font-family: 'DIN Next Stencil Medium';
+  src: url('../fonts/DINNextStencil-Regular.eot');
+  src: url('../fonts/DINNextStencil-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DINNextStencil-Regular.woff') format('woff'),
+  url('../fonts/DINNextStencil-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+@font-face {
+  font-family: 'RUSBoycott Regular';
+  src: url('../fonts/RUSBoycott.eot');
+  src: url('../fonts/RUSBoycott.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/RUSBoycott.woff') format('woff'),
+  url('../fonts/RUSBoycott.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+@font-face {
+    font-family: "day28";  
+    src: url("../fonts/17734.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+     }
+header {
+    position: fixed;
+    background: url(../img/home.jpg) no-repeat center;
+    display: block;
+    background-size: cover;
+    width: 100%;
+    transition: 3s;
+    z-index: 5;
+    overflow-x: hidden;
+    height: 100vh;
+    justify-content: center;
+}
+@keyframes bg {
+  0% {
+    background: url(../img/home.jpg) no-repeat center;
+    background-size: cover;
+  }
+  25% {
+    opacity: 0.5;;
+  }
+  50% {
+    opacity: 0;
+  }  
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -5;
+  }
+}
+@keyframes bg3 {
+  0% {
+    background: url(../img/boxing-1842466.jpg) no-repeat center;
+    background-size: cover;
+  }
+  25% {
+    opacity: 0.5;;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -5;
+  }
+}
+nav {
+    width: 60%;
+    height: 16vh;
+}
+.underline {
+  color: red!important;
+  font-family: 'RUSBoycott Regular'!important;
+  font-size: 20px!important;
+  line-height: 1.3em;
+}
+.menu::after {
+    content: "";
+    background: white;
+    display: block;
+    left: 4%;
+    width: 92%;
+    height: 2px;
+    text-align: left;
+    position: absolute;
+    bottom: 20px;
+    animation: down__L 5.8s linear;
+}
+@keyframes down__L {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 92%;
+    }
+}
+.logo {
+    margin: 10px 0px 0px 20px;
+    width: 102px;
+    height: 100px;
+    animation: pulse 15s linear infinite;
+}
+@keyframes pulse {
+    0% {
+        filter: sepia(0) invert(0)
+    }
+
+    50% {
+        filter: sepia(1) invert(1)
+    }
+    100% {
+        
+    }
+}
+.menu {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.menu__item {
+    display: block;
+}
+.link__item {
+    display: block;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 6px 10px 10px 10px;
+    font-family: "day28";
+    text-decoration: none;
+    transition: 0.7s;
+}
+.link__item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    transition: 0.7s;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid red;
+    border-left: 2px solid red;
+    box-sizing: border-box;
+} 
+.link__item:hover:before {
+    width: 10px;
+    height: 10px;
+}
+.link__item::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    transition: 0.7s;
+    height: 100%;
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+    box-sizing: border-box;
+} 
+.link__item:hover:after {
+    width: 10px;
+    height: 10px;
+}
+.link__item:hover {
+    font-size: 30px;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+h1 {
+    color: white;
+}
+.container__header {
+    max-width: 1280px;
+    width: 1280px;
+}
+.top__container {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.link__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 15%;
+    height: 16vh;
+    align-items: center;
+}
+.contact__section {
+    display: flex;
+    height: 16vh;
+    width: 15%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 16vh;
+}
+.contact__item {
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    margin: 0px 3px;
+    justify-content: center;
+    background: none;
+    align-items: center;
+}
+.contact__link {
+    width: 47px;
+    height: 47px;
+    display: block;
+    transition: 0.5s;
+    text-decoration: none;
+    background: none; 
+}
+.fa {
+    transition: 1s;
+    display: flex;
+    text-decoration: none;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    font-size: 25px;
+}
+.fa::before {
+    font-family: 'fontAwesome';
+    content: '\f189';
+    text-align: center;
+    line-height: 45px;
+    top: 0;
+    left: 25px;
+    width: 100%;
+    transform-origin: top;
+    transition: transform 0.5s;
+    background: white;
+    height: 100%;
+    color: red;
+}
+.contact__item:hover .fa::before {
+    transform: rotateX(90deg) translateX(-50%);
+    position: absolute;
+}
+.fa::after {
+    font-family: 'fontAwesome';
+    content: '\f189';
+    text-align: center;
+    line-height: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    background: red;
+    height: 100%;
+    color: white;
+    transform: rotateX(90deg) translateX(50%);
+}
+.contact__item:hover .fa::after {
+    transform: rotateX(0deg) translateX(0);
+}
+.contact__item:nth-child(2) .fa::before,
+.contact__item:nth-child(2) .fa::after {
+    content: "\f16d";
+}
+.contact__item:nth-child(3) .fa::before,
+.contact__item:nth-child(3) .fa::after {
+    content: "\f2c6";
+}
+.phone__link {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 15px;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 16%;
+    height:11vh;
+}
+
+.phone {
+    text-decoration: none;
+    color: red;
+    font-family: "day28";
+    font-size: 18px;
+
+}
+.phone::before {
+    font-family: 'fontAwesome';
+    content: '\f095';
+    color: white;
+    font-size: 20px;
+    padding: 5px 7px 0px 0px;
+    animation: rotate45 5s linear infinite !important;
+}
+@keyframes rotate45 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.line {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  .line__left {
+    width: 43%;
+    height: 2px;
+    background: red;
+    position: relative;
+    margin-left: 1%;
+    animation: anime2  5s 4.5s both linear 1;
+  }
+  .line__left::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: -7px;
+    animation: anime 5s 4.5s both linear;
+  }
+  .line__img {
+    font-family: 'RUSBoycott Regular';
+    text-align: center;
+    width: 130px;
+    color: red;
+    padding-left: 10px;
+    line-height: 35px;
+    padding-bottom: 50px;
+    font-size: 30px;
+    height: 50px;
+    margin: 0px 2%;
+    animation: anime5 5s 4.5s both linear 1;
+  }
+  .line__right {
+    width: 43%;
+    height: 2px;
+    background: red;
+    position: relative;
+    margin-right: 1%;
+    animation: anime4 5s 4.5s both linear 1;
+  }
+  .line__right::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: white;
+    position: absolute;
+    right: 0px;
+    top: -7px;
+    animation: anime3 5s 4.5s both linear 1; 
+  }
+  @keyframes anime {
+    0% {
+      opacity: 0;
+      }
+    30% {
+      opacity: 1;
+      transform: rotate(0deg);
+      }
+    33% {
+      transform: rotate(135deg);
+      }
+   90% {
+      transform: rotate(135deg);
+      }
+    100% {
+      transform: rotate(135deg);
+      }
+  }
+  @keyframes anime2 {
+    0% {
+      width: 0%;
+      }
+    30.5% {
+      width: 0%
+      }
+    60% {
+      width: 43%;
+      }
+    100% {
+      
+      }
+  }
+  @keyframes anime3 {
+    0% {
+      opacity: 0;
+      }
+    30% {
+      opacity: 1;
+      transform: rotate(0deg);
+      }
+    33% {
+      transform: rotate(-135deg);
+      }
+   90% {
+      transform: rotate(-135deg);
+      }
+    100% {
+      transform: rotate(-135deg);
+      }
+  }
+  @keyframes anime4 {
+    0% {
+      width: 0%;
+      }
+    30.5% {
+      width: 0%
+      }
+    60% {
+      width: 43%;
+      }
+    100% {
+      
+      }
+  }
+  @keyframes anime5 {
+    0% {
+      opacity: 0;
+      }
+    30.5% {
+      opacyty: 0;
+      }
+    60% {
+       opacity: 0;
+      }
+    80% {
+      opacity: 1;
+      }
+    100% {
+      
+      }
+  }
+  .text {
+    margin-top: 35px;
+    background: rgba(255,0,0, 0.5);
+    animation: fadein 3s 8.5s both linear;
+  }
+  .text__sb50 {
+    font-family: 'DIN Next Stencil Medium';
+    padding: 25px 80px 25px 80px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    animation: fadein 3s 10.5s both linear;
+  }
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.arrow__down {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
+  flex-direction: column;
+  justify-content: center;
+}
+.arrow__down__item {
+  width: 50px;
+  height: 50px;
+  margin-bottom: -35px;
+  list-style: none;
+  transform: rotate(-45deg);
+  border-left: 2.5px solid white;
+  position: relative;
+  border-bottom: 2.5px solid white;
+  animation: opacity 0.5s 12.3s both linear;
+}
+.arrow__down__item::before {
+  content: "";
+  border-left: 2px solid red;
+  border-bottom: 2px solid red;
+  width: 100%;
+  height: 100%;
+  left: -1px;
+  top: -1.5px;
+  position: absolute;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.arrow__down__item:nth-child(1) {
+  animation: opacity 3s 12.9s both linear infinite;
+}
+.arrow__down__item:nth-child(2) {
+  animation: opacity 3s 13.5s both linear infinite;
+}
+.arrow__down__item:nth-child(3) {
+  animation: opacity 3s 14.1s both linear infinite;
+}
+.arrow__down__item:nth-child(4) {
+  animation: opacity 3s 14.7s both linear infinite;
+}
+/*skew 0;20deg*/
+.skills {
+  background: url(../img/boxing-1842466.jpg) no-repeat center;
+  background-size: cover;
+  z-index: -5;
+  display: none;
+  transition: 3s;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100vh;
+}
+@keyframes bg2 {
+  0% {
+    display: block!important;
+    background: url(../img/boxing-1842466.jpg) no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    z-index: 5;
+    transform: scale(.7) skew(0deg, -20deg);
+  }
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(.7) skew(0deg, -20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) skew(0deg, 0deg);
+    text-decoration: none;
+  }
+}
+@keyframes bg4 {
+  0% {
+    display: block!important;
+    background: url(../img/home.jpg) no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    z-index: 5;
+    transform: scale(.7) skew(0deg, -20deg);
+  }
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(.7) skew(0deg, -20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) skew(0deg, 0deg);
+    text-decoration: none;
+  }
+}
+@keyframes bg5 {
+  0% {
+    display: block!important;
+    background: url(../img/background__photo.jpg) no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    z-index: 5;
+    transform: scale(.7) skew(0deg, -20deg);
+  }
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(.7) skew(0deg, -20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) skew(0deg, 0deg);
+    text-decoration: none;
+  }
+}
+.skills__container {
+  margin: 0px auto;
+  width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  height: 100%;
+}
+.skills__text1 {
+  display: none;
+  font-family: "day28";
+  width: 80%;
+  color: white;
+  padding: 30px 0px 30px 35px;
+  font-size: 25px;
+}
+.skills__items {
+  width: 85%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.skills__items__item {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  transition: 3s;
+  z-index: 2;
+  width: 30%;
+  height: 75%;
+  justify-content: center;
+  align-items: center;
+}
+.skills__items__item:hover .skills__items__img {
+  filter: grayscale(1);
+  z-index: -5;
+}
+.skills__items__item:hover .skills__img__text {
+  opacity: 1;
+}
+.skills__items__item:hover .skills__img__text1 {
+  opacity: 1;
+}
+.skills__items__item:nth-child(1) .skills__items__img {
+  background: url(../img/strong.jpg) no-repeat center;
+  background-size: cover;
+}
+.skills__items__item:nth-child(2) .skills__items__img {
+  background: url(../img/wp.jpg) no-repeat center;
+  background-size: cover;
+}
+.skills__items__item:nth-child(3) .skills__items__img {
+  background: url(../img/MERK6100.jpg) no-repeat center;
+  background-size: cover;
+}
+.skills__items__item::before {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 35%;
+  top: 0;
+  left: 0;
+  border-left: 2px solid red;
+  z-index: 10;
+  border-top: 2px solid red;
+}
+.skills__items__item::after {
+  content: '';
+  position: absolute;
+  width: 35%;
+  height: 35%;
+  bottom: 0;
+  right: 0;
+  border-right: 2px solid red;
+  z-index: 10;
+  border-bottom: 2px solid red;
+}
+.skills__items__img {
+  width: 100%;
+  position: absolute;
+  filter: grayscale(0);
+  height: 100%;
+  background: red;
+  left: 0;
+  top: 0;
+  transition: 3s;
+}
+.skills__img__text {
+  font-family: 'DIN Next Stencil Medium';
+  font-size: 25px;
+  color: white;
+  transition: 3s;
+  opacity: 0;
+  text-align: center;
+}
+.skills__img__text1 {
+  font-family: 'DIN Next Stencil Medium';
+  font-size: 15px;
+  transition: 3s;
+  opacity: 0;
+  color: white;
+  text-align: center;
+}
+.right__menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 14.5%;
+  height: 80%;
+}
+.right__menu__item {
+  list-style: none;
+  font-family: "day28";
+
+  color: white;
+  font-size: 20px;
+  padding: 20px 0px;
+
+}
+.path {
+  stroke-dasharray: 20;
+}
+.photo {
+  background: url(../img/background__photo.jpg) no-repeat center;
+  background-size: cover;
+  z-index: 555;
+  display: none;
+  transition: 3s;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100vh;
+}
+.photo__container {
+  margin: 0px auto;
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  height: 100%;
+}
+.photo__items__lines {
+  width: 80%;
+  height: 35vh;
+  display: none;
+}
+.photo__items__line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.photo__item {
+  list-style: none;
+  width: 65px;
+  height: 65px;
+  transform: rotate(0deg);
+  margin: 0px 20px 37.55px 10px;
+  border: 2px solid white;
+  transition: 3s;
+}
+.line__photo {
+  width: 100%;
+  height: 100%;
+  margin-top: -55px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.photo__item:nth-child(1) {
+  animation: fadeIn 0s .5s both linear;
+}
+.photo__item:nth-child(2) {
+  animation: fadeIn 1s .5s both linear;
+}
+.photo__item:nth-child(3) {
+  animation: fadeIn 2s .5s both linear;
+}
+.photo__item:nth-child(4) {
+  animation: fadeIn 3s .5s both linear;
+}
+.photo__item:nth-child(5) {
+  animation: fadeIn 4s .5s both linear;
+}
+.photo__item:nth-child(6) {
+  animation: fadeIn 5s .5s both linear;
+}
+.photo__item:nth-child(7) {
+  animation: fadeIn 6s .5s both linear;
+}
+.photo__item:nth-child(8) {
+  animation: fadeIn 7s .5s both linear;
+}
+.photo__item:nth-child(9) {
+  animation: fadeIn 8s .5s both linear;
+}
+.photo__item:nth-child(10) {
+  animation: fadeIn 9s .5s both linear;
+}
+.rectangle__img:nth-child(1) {
+  animation: fadeIn 0s .5s both linear;
+}
+.rectangle__img:nth-child(2) {
+  animation: fadeIn 1s .5s both linear;
+}
+.rectangle__img:nth-child(3) {
+  animation: fadeIn 2s .5s both linear;
+}
+.photo__item:nth-child(4) {
+  animation: fadeIn 3s .5s both linear;
+}
+.photo__item:nth-child(5) {
+  animation: fadeIn 4s .5s both linear;
+}
+.photo__item:nth-child(6) {
+  animation: fadeIn 5s .5s both linear;
+}
+.photo__item:nth-child(7) {
+  animation: fadeIn 6s .5s both linear;
+}
+.photo__item:nth-child(8) {
+  animation: fadeIn 7s .5s both linear;
+}
+.photo__item:nth-child(9) {
+  animation: fadeIn 8s .5s both linear;
+}
+.photo__item:nth-child(10) {
+  animation: fadeIn 9s .5s both linear;
+}
+@keyframes fadeIn {
+  0% {
+    transform: translateX(-1500px);
+  }
+  50% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0px) rotate(45deg);
+  }
+}
+.gal__photo:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  transition: 3s;
+  background: url(../img/MERK6100.jpg) no-repeat center;
+  background-size: contain;
+}
+.gallery1:hover + .photo {
+  background: url(../img/MERK6100.jpg) no-repeat center!important;
+}
